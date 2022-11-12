@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <script>
+            function fetch() {
+              var data = new FormData();
+              data.append('search', document.getElementById("search").value);
+              data.append('ajax', 1);
+              var xhr = new XMLHttpRequest();
+              xhr.open('POST', "search_2.php");
+              xhr.onload = ()=>{
+                var results = JSON.parse(this.response),
+                wrapper = document.getElementById("results");
+                if (results.length > 0) {
+                  wrapper.innerHTML = "";
+                  for (let res of results) {
+                    let line = document.createElement("div");
+                    line.innerHTML = `${res['ID']} &nbsp;&nbsp;  | &nbsp;&nbsp; ${res['song_name']} &nbsp;&nbsp; | &nbsp;&nbsp; ${res['rating']} &nbsp;&nbsp; | &nbsp;&nbsp; ${res['rel_yr']} &nbsp;&nbsp; | &nbsp;&nbsp; ${res['play']}`;
+                    wrapper.appendChild(line);
+                  }
+                } else { wrapper.innerHTML = "No results found"; }
+              };
+              xhr.send(data);
+              return false;
+            }
+            </script>
+        <title>
+            Songs
+        </title>
+    </head>
+    <body>
+        <center><h1>Songs</h1>
+        <h2>The one place for all your songs!</h2>
+        <div class="card">
+            <div class="header">
+                Find your favourite tunes
+            </div>
+            <br><br>
+            <div class="container">
+                We serve all songs ad free!! These songs are made available by various labels to us, and are all available to listen online for free. You can search for your favourite tunes below - <br><br>
+                <center>
+                <form method="POST" onsubmit="return fetch();">
+                    <input type="text" id="search" name='search' placeholder="What are we listening to today?" width=20px><br><br>
+                    <button class="button" style="vertical-align:middle" id="Submit" value="Submit"><span>Search </span></button>
+                </form><p>
+                S.No &nbsp;&nbsp; | &nbsp;&nbsp; Song Name &nbsp;&nbsp; | &nbsp;&nbsp; Rating &nbsp;&nbsp; |  &nbsp;&nbsp; Year of release 
+                </p>
+                <div id="results" class="res">
+                </div>
+                </center>
+            </div>
+        </div>
+        </center>
+    </body>
+</html>

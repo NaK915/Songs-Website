@@ -1,0 +1,119 @@
+h1 {
+    font-family:Bell MT;
+    color:rgb(93, 253, 71);
+    font-size: 75px;
+    font-weight: bolder;
+}
+h2 {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:rgb(93, 253, 71);
+    font-size: 25px;
+    font-weight: bolder;
+}
+h3 {
+    font-family:Kristen ITC;
+    color:white;
+    font-size: 25px;
+    font-weight: bolder;
+}
+body{
+    background-color:black;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 99%;
+    box-shadow:  rgba(0,0,0,0.2) 0 0 0 100vmax inset;
+}
+p{
+    text-align: center;
+    font-size: 15px;
+    font-family: Eras ITC;
+    padding: 1%;
+}
+div{
+    padding: 1%;
+}
+div.res{
+    text-align: center;
+    font-size: 15px;
+    font-family: Eras ITC;
+}
+div.card {
+    width: 40%;
+    float:center;
+    box-shadow: 0 4px 8px 0 rgba(93, 253, 71, 0.2), 0 6px 20px 0 rgba(93, 253, 71, 0.19);
+    text-align:justify;
+    margin: 25px;
+    background-color: rgba(0,0,0,0.3);
+}  
+div.header {
+    box-shadow:0 2px 1px 1px rgba(45, 255, 237, 0.5);
+    color: rgb(255, 255, 255);
+    MFXHG53FOIXGQ5DN
+    padding: 10px;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: Comic Sans Ms;
+    text-align: center;
+}  
+div.container {
+    color: rgb(255, 255, 255);
+    padding: 5px;
+    font-size: 18px;
+    font-family:bradley hand ITC;
+    font-weight: bold;
+}
+input[type=text]{
+    width: 50%;
+    padding: 10px 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    box-shadow: rgba(255,255,255,0.2);
+    border-radius: 4px;
+    background-color: rgba(93,253,71,0.2);
+    border: 4px;
+    color:white;
+}
+.button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color:rgba(57,255,20,0.8);
+    border: none;
+    color:white;
+    text-align: center;
+    font-size: 28px;
+    padding: 1%;
+    height: 50px;
+    width: 30%;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .button:hover span {
+    padding-right: 25px;
+  }
+  
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+  .button:hover {
+    box-shadow: 0 5px 10px 0 rgba(93,253,71,0.2),0 5px 10px 0 rgba(93,253,71,0.2);
+  }
